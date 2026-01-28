@@ -8,7 +8,7 @@ function CreatePaste() {
   const [url, setUrl] = useState("");
 
   async function submit() {
-    const res = await fetch("https://pastebin-backend-8efp.onrender.com/api/pastes", {
+    const res = await fetch("https://pastebin-backend-jxma.onrender.com/api/pastes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -64,7 +64,7 @@ function ViewPaste() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch(`https://pastebin-backend-8efp.onrender.com/api/pastes/${id}`)
+    fetch(`https://pastebin-backend-jxma.onrender.com/api/pastes/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error();
         return res.json();
